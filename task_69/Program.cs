@@ -4,4 +4,14 @@
 // A = 3; B = 5 -> 243 (3⁵)
 // A = 2; B = 3 -> 8
 
-Console.WriteLine("Hello, World!");
+int Degree(int a, int b)
+{
+    if (b == 0) return 1;
+    else return a * Degree(a, b - 1);
+}
+Console.Write("Введите число a: ");
+int n = int.Parse(Console.ReadLine()!);
+Console.Write("Введите число b: ");
+int m = int.Parse(Console.ReadLine()!);
+Console.WriteLine($"Число {n} в степени {m} равно {Degree(n, m)}");
+
