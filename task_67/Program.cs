@@ -4,4 +4,12 @@
 // 453 -> 12
 // 45 -> 9
 
-Console.WriteLine("Hello, World!");
+int GetSumNumb(int a)
+{
+    if (a > 0) a = a % 10 + GetSumNumb(a / 10);
+    return (a);
+}
+Console.Write("Введите число a: ");
+int n = int.Parse(Console.ReadLine()!);
+Console.WriteLine(GetSumNumb(n));
+
